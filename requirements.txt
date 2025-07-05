@@ -1,0 +1,9 @@
+streamlit
+pandas
+sqlite3
+joblib
+scikit-learn
+matplotlib
+plotly
+lightgbm
+datetime
