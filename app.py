@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import sqlite3
 import joblib
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 from model_utils import *
@@ -20,14 +20,14 @@ def get_db_connection():
     conn = sqlite3.connect('data/streamflow.db',check_same_thread=False)
     return conn
 
-# --- TẢI MÔ HÌNH (Cache để không phải tải lại) ---
-@st.cache_resource
-def load_models(station_id):
-    # Đường dẫn có thể thay đổi tùy theo cách bạn lưu tên file
-    lgbm_model = joblib.load(f'models/lgbm_station_{station_id}.pkl')
-    rf_model = joblib.load(f'models/rf_station_{station_id}.pkl')
-    lstm_model = load_model(f'models/lstm_station_{station_id}.h5')
-    return {'LGBM': lgbm_model, 'RF': rf_model, 'LSTM': lstm_model}
+# # --- TẢI MÔ HÌNH (Cache để không phải tải lại) ---
+# @st.cache_resource
+# def load_models(station_id):
+#     # Đường dẫn có thể thay đổi tùy theo cách bạn lưu tên file
+#     lgbm_model = joblib.load(f'models/lgbm_station_{station_id}.pkl')
+#     rf_model = joblib.load(f'models/rf_station_{station_id}.pkl')
+#     lstm_model = load_model(f'models/lstm_station_{station_id}.h5')
+#     return {'LGBM': lgbm_model, 'RF': rf_model, 'LSTM': lstm_model}
 
 # --- GIAO DIỆN CHÍNH ---
 st.title("🌊 Dự báo dòng chảy thượng lưu sông Đà")
