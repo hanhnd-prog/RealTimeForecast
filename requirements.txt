@@ -3,7 +3,8 @@ pandas
 joblib
 scikit-learn
 matplotlib
-plotly
 lightgbm
 datetime
-tensorflow
+plotly
+PyWavelets
+openpyxl
