@@ -80,7 +80,7 @@ end_date = str(end_date)
 # Giả sử bạn dự báo trước từ 1 đến 10 ngày
 selected_lead_time = st.sidebar.selectbox(
     "Chọn thời gian dự kiến (số bước):",
-    options=list(range(1, 10)), # Thay đổi range này nếu bạn có thời gian dự kiến khác
+    options=list(range(1, 11)), # Thay đổi range này nếu bạn có thời gian dự kiến khác
     index=0 # Mặc định là dự báo 1 ngày
 )
 
