@@ -175,7 +175,7 @@ st.subheader("Đồ thị kết quả dự báo thời gian thực:")
 # Lấy dữ liệu quan trắc trong 10 ngày gần nhất
 ngay_cuoi_quantrac = datetime.today() - timedelta(days=1)
 ngay_cuoi_quantrac = ngay_cuoi_quantrac.strftime('%Y-%m-%d')
-st.header(ngay_cuoi_quantrac)
+# st.header(ngay_cuoi_quantrac)
 ngay_dau_quantrac = datetime.today() - timedelta(days=11)
 ngay_dau_quantrac = ngay_dau_quantrac.strftime('%Y-%m-%d')
 
