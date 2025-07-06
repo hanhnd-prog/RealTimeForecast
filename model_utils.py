@@ -64,7 +64,7 @@ def get_realtime_prediction_data(conn,station_id):
     """
     df = pd.read_sql(query, conn, params=(station_id,yesterday_str))
     df.rename(columns={'prediction_for_date': 'Dự báo cho ngày'}, inplace=True)
-    #df['predicted_value'] = df['predicted_value'].round(1)
+    df['predicted_value'] = df['predicted_value'].round(1)
     if not df.empty:
         df_pivot = df.pivot_table(index='Dự báo cho ngày', columns='model_name', values='predicted_value')
         return df_pivot
