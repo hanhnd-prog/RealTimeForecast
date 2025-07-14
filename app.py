@@ -527,7 +527,7 @@ elif selected_data_type == "Dòng chảy trung bình 30 ngày":
     Scf = Scf.round(3)
     
     st.info(f'**Sai số cho phép (Scf): {Scf}**')
-    st.info(f'So sánh cho các dự báo trong quá khứ:**')
+    st.info(f'**So sánh cho các dự báo trong quá khứ:**')
     df_comparison['upper'] = df_comparison['Thực đo'] + Scf
     df_comparison['lower'] = df_comparison['Thực đo'] - Scf
     
